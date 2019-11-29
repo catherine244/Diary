@@ -1,0 +1,24 @@
+<div class="container">
+        <h1>DIARY APP</h1>
+        <hr>
+      <div id="body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-cd" *ngFor='let goal of goals;let i = index'>
+              <div>
+                <h6 id={{i}} appStrikethrough>{{goal.name}}  {{goal.completeDate|date|uppercase}}</h6>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Diary</button>
+              </div>
+      
+              <div class="card-ls" *ngIf='goal.showDescription'>
+                <app-goal-detail  [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+                <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
+           </div>
+        </div>
+        <!-- <p *ngIf='goals.length > 5'>You have too many goals</p> -->
+      </div>
+</div>

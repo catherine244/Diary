@@ -1,0 +1,14 @@
+#head{
+    color:blue;
+    font-size: 40px;
+}
+#body{
+    background-image: url("https://bit.ly/2XZrPMz");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-cd{
+    background-image: url("https://bit.ly/2DqSmc9");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,7 @@
+<p>{{goal.description}}</p>
+<p>This Diary will be complete in {{goal.completeDate|dateCount}} days</p>
+<span><button (click)=likebuttonclick()>like</button></span>
+<span>{{numberoflikes}}</span>
+<span><button (click)=dislikebuttonclick()>dislike</button></span>
+<span>{{numberofdislikes}}</span><br><br>
+<button (click)= 'goalDelete(true)' class="btn btn-outline-danger">Delete Goal</button>
